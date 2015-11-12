@@ -1,0 +1,41 @@
+コードの設計、開発環境のセットアップ、スクショ、工夫したところ
+ここでは開発したアプリケーションに関する工夫を説明する.
+\section{アプリケーションの開発環境}
+　webアプリケーション開発にはjavascriptのwebフレームワークであるNode.jsを用いた.Node.jsのパッケージであるexpressとnanoを用いた.expressはwebフレームワークで、nanoはCouchDBのためのドライバである.
+
+\begin{table}[htb]
+	\begin{tabular}{|l|c|r|r|}\hline
+	導入ソフト & ヴァージョン \\ \hline \hline
+	Node.js & 0.12.6 \\ \hline
+	Express & 4.12.1 \\ \hline
+	Passport & 未定 \\ \hline
+	\end{tabular}
+\end{table}
+	
+
+\section{データベースの設計}
+	CouchDBにss-mixの仕様書から引っ張ってきたデータ格納方法およびデータ定義\cite{bibi1}に基づいてデータを格納する.
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=5cm, bb=0 0 645 790]{ss-mix_sample.png} %よこたて
+		\end{center}
+		\caption{データ定義}
+		\label{ss-mix_sample}
+	\end{figure}
+
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=5cm, bb=0 0 437 688]{ss-mix_sampledata.png}
+		\end{center}
+		\caption{データサンプル}
+		\label{ss-mix_sampledata}
+	\end{figure}
+
+\section{アプリケーションの設計}
+　どうやってCouchからデータを引っ張ってきているか
+
+\section{アプリケーションの機能}
+　医療情報を収集するNoSQLデータベースシステム.UIとしてWebアプリを用意し、医療関係者、薬剤師、患者の３者に対して、情報を扱いやすいようにした.
+	\subsection{患者情報閲覧}
+	\subsection{共有の許可,権限}
+	\subsection{データベースの利用}

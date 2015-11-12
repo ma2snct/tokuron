@@ -1,0 +1,60 @@
+This is e-upTeX, Version 3.14159265-p3.5-u1.11-130605-2.6 (utf8.uptex) (TeX Live 2014) (preloaded format=uplatex 2015.4.3)  23 OCT 2015 12:53
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**yokousample
+(./yokousample.tex
+pLaTeX2e <2011/05/07u00>+0 (based on LaTeX2e <2014/05/01> patch level 0)
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./yokou.cls
+Document Class: yokou 2008/01/17
+(/usr/local/texlive/2014/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2006/06/27 v1.6 Standard pLaTeX class
+\c@@paper=\count81
+(/usr/local/texlive/2014/texmf-dist/tex/platex/base/jsize11.clo
+File: jsize11.clo 2006/06/27 v1.6 Standard pLaTeX file (size option)
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 51.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 51.
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+
+
+! LaTeX Error: Encoding scheme `JY1' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.599 ...\DeclareSymbolFont{mincho}{JY1}{mc}{m}{n}
+                                                  
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.599 ...\DeclareSymbolFont{mincho}{JY1}{mc}{m}{n}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
+Here is how much of TeX's memory you used:
+ 195 strings out of 493800
+ 2353 string characters out of 6151921
+ 57277 words of memory out of 5000000
+ 3753 multiletter control sequences out of 15000+600000
+ 6546 words of font info for 34 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 30i,0n,21p,158b,44s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}背景}{1}
+\contentsline {section}{\numberline {2}目的}{1}
+\contentsline {section}{\numberline {3}方法}{1}
+\contentsline {section}{\numberline {4}開発}{1}
+\contentsline {section}{\numberline {5}アプリケーションの開発環境}{1}
+\contentsline {section}{\numberline {6}データベースの設計}{2}
+\contentsline {section}{\numberline {7}アプリケーションの設計}{2}
+\contentsline {section}{\numberline {8}アプリケーションの機能}{2}
+\contentsline {subsection}{\numberline {8.1}患者情報閲覧}{3}
+\contentsline {subsection}{\numberline {8.2}共有の許可,権限}{3}
+\contentsline {subsection}{\numberline {8.3}データベースの利用}{3}
+\contentsline {section}{\numberline {9}結果}{3}
+\contentsline {section}{\numberline {10}考察}{3}
