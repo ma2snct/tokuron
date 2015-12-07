@@ -1,6 +1,7 @@
 コードの設計、開発環境のセットアップ、スクショ、工夫したところ
 ここでは開発したアプリケーションに関する工夫を説明する.
-\section{アプリケーションの開発環境}
+
+\subsection{アプリケーションの開発環境}
 　webアプリケーション開発にはjavascriptのwebフレームワークであるNode.jsを用いた.Node.jsのパッケージであるexpressとnanoを用いた.expressはwebフレームワークで、nanoはCouchDBのためのドライバである.
 
 \begin{table}[htb]
@@ -11,9 +12,9 @@
 	Passport & 未定 \\ \hline
 	\end{tabular}
 \end{table}
-	
 
-\section{データベースの設計}
+
+\subsection{データベースの設計}
 	CouchDBにss-mixの仕様書から引っ張ってきたデータ格納方法およびデータ定義\cite{bibi1}に基づいてデータを格納する.
 	\begin{figure}[htbp]
 		\begin{center}
@@ -31,11 +32,25 @@
 		\label{ss-mix_sampledata}
 	\end{figure}
 
-\section{アプリケーションの設計}
-　どうやってCouchからデータを引っ張ってきているか
+\subsection{アプリケーションの設計}
 
-\section{アプリケーションの機能}
+
+\subsection{アプリケーションの機能}
 　医療情報を収集するNoSQLデータベースシステム.UIとしてWebアプリを用意し、医療関係者、薬剤師、患者の３者に対して、情報を扱いやすいようにした.
-	\subsection{患者情報閲覧}
-	\subsection{共有の許可,権限}
-	\subsection{データベースの利用}
+
+	\subsubsection{患者情報閲覧}
+		必要な人に必要な情報が見えるヴューを用意する.
+		血圧とか、血糖とか、項目を指定したらその項目の数値を
+		異なるフォーマットによって投入されてるドキュメントからひっぱってきて表示する.
+
+	\subsubsection{共有の許可,権限}
+		患者が情報共有する医療関係者を選択する.
+
+	\subsubsection{データベースの利用}
+		1診療1ドキュメント
+		どうやってCouchからデータを引っ張ってきているか.
+		患者のドキュメントを検索してからデータを取得.
+
+	\subsubsection{データの投入方法}
+		 患者,医療関係者からの投入を受け付ける.
+		 ファイルを指定してpostで送信してる.
