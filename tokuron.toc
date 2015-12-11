@@ -9,11 +9,11 @@
 \contentsline {section}{\numberline {4}開発}{2}
 \contentsline {subsection}{\numberline {4.1}アプリケーションの開発環境}{2}
 \contentsline {subsection}{\numberline {4.2}データベースの設計}{2}
-\contentsline {subsection}{\numberline {4.3}アプリケーションの設計}{2}
-\contentsline {subsection}{\numberline {4.4}アプリケーションの機能}{2}
+\contentsline {subsection}{\numberline {4.3}アプリケーションの設計}{4}
+\contentsline {subsection}{\numberline {4.4}アプリケーションの機能}{4}
 \contentsline {subsubsection}{\numberline {4.4.1}患者情報閲覧}{4}
 \contentsline {subsubsection}{\numberline {4.4.2}共有の許可,権限}{4}
 \contentsline {subsubsection}{\numberline {4.4.3}データベースの利用}{4}
 \contentsline {subsubsection}{\numberline {4.4.4}データの投入方法}{4}
 \contentsline {section}{\numberline {5}結果}{4}
-\contentsline {section}{\numberline {6}考察}{4}
+\contentsline {section}{\numberline {6}考察}{5}

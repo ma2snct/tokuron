@@ -15,7 +15,25 @@
 
 
 \subsection{データベースの設計}
-	CouchDBにss-mixの仕様書から引っ張ってきたデータ格納方法およびデータ定義\cite{bibi1}に基づいてデータを格納する.
+	CouchDBにss-mixの仕様書から引っ張ってきたデータ格納方法およびデータ定義\cite{bibi1}に基づいてデータを格納する.CouchDBはひとつのデータベースの中に複数のドキュメントとよばれるデータ構造を保持している.このドキュメントは事前にテーブルなどで定義する必要がない.
+	
+	本研究ではひとつの医療行為に対してひとつのドキュメントで管理する.ドキュメントが保持する情報を\ref{tab:doc}に示す.
+	
+
+\begin{table}[htb]
+	\caption{ドキュメントが保持する情報}
+	\begin{tabular}{|l|c|r|r|}\hline
+	Key & Value \\ \hline \hline
+	id &  ドキュメントを一意に定めるためのID.CouchDBによって自動で割り振られる.\\ \hline
+	rev & ドキュメントの更新回数を示す. 更新時に参照し競合を防ぐ. \\ \hline
+	name & 患者の名前 \\ \hline
+	data & 医療行為によって得られた情報をjsonで格納. \\ \hline
+	\end{tabular}
+	\label{tab:doc}
+\end{table}
+
+	
+	
 	\begin{figure}[htbp]
 		\begin{center}
 			\includegraphics[width=5cm, bb=0 0 645 790]{ss-mix_sample.png} %よこたて
