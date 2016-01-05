@@ -35,7 +35,7 @@
 
 	\begin{figure}[htbp]
 		\begin{center}
-			\includegraphics[width=5cm, bb=0 0 645 790]{ss-mix_sample.png} %よこたて
+			\includegraphics[width=5cm, bb=0 0 645 790]{./gazou/ss-mix_sample.png} %よこたて
 		\end{center}
 		\caption{データ定義}
 		\label{ss-mix_sample}
@@ -81,6 +81,15 @@
 
 
 \subsection{データの投入方法}
+
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/fileiopage.png}
+		\end{center}
+		\caption{ファイル入力ページ}
+		\label{ss-mix_sampledata}
+	\end{figure}
+
 	dbaccess
 	1診療1ドキュメント
 	どうやってCouchからデータを引っ張ってきているか.
@@ -122,5 +131,23 @@
 				\label{ss-mix_sampledata}
 			\end{figure}
 
-	患者,医療関係者からの投入を受け付ける.
-	ファイルを指定してpostで送信してる.
+			患者,医療関係者からの投入を受け付ける.
+			ファイルを指定してpostで送信してる.
+
+
+\subsection{同義キーの登録}
+	\begin{figure}[htbp]
+		%\begin{center}
+			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/relation.png}
+		%\end{center}
+		\caption{同義キーを管理するドキュメント}
+		\label{relation}
+	\end{figure}
+
+	\begin{figure}[htbp]
+		%\begin{center}
+			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/relationApp.png}
+		%\end{center}
+		\caption{処方と検索して同義キーとして登録されている日時を表示する}
+		\label{relationApp}
+	\end{figure}
