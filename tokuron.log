@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.5-130605-2.6 (utf8.euc) (TeX Live 2014) (preloaded format=platex 2015.4.3)  6 JAN 2016 01:03
+This is e-pTeX, Version 3.14159265-p3.5-130605-2.6 (utf8.euc) (TeX Live 2014) (preloaded format=platex 2015.4.3)  6 JAN 2016 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -91,9 +91,6 @@ LaTeX Warning: Label `ss-mix_sampledata' multiply defined.
 
 LaTeX Warning: Label `ss-mix_sampledata' multiply defined.
 
-
-LaTeX Warning: Label `ss-mix_sampledata' multiply defined.
-
 )
 \openout1 = `tokuron.aux'.
 
@@ -126,7 +123,7 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 15.
- (./abst.tex) [1] (./tokuron.toc
+ (./abst.tex) (./abstJapanese) [1] (./tokuron.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
@@ -135,7 +132,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
- [1
+
+
+LaTeX Warning: Citation `bibi5' on page i undefined on input line 8.
+
+[1
 
 ])
 \tf@toc=\write3
@@ -143,16 +144,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [2] (./chap1.tex
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 27.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 27.
-) (./chap2.tex
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 26.
+) [1
 
-LaTeX Warning: Citation `bibi5' on page 1 undefined on input line 3.
+] (./chap2.tex
 
-[1
+LaTeX Warning: Citation `bibi5' on page 2 undefined on input line 3.
 
-] [2]) (./chap3.tex
+[2]) (./chap3.tex
 File: ./gazou/DjangoFileio.png Graphic file (type eps)
  <./gazou/DjangoFileio.png>
 File: ./gazou/DjangoTable.png Graphic file (type eps)
@@ -160,25 +161,19 @@ File: ./gazou/DjangoTable.png Graphic file (type eps)
 File: ./gazou/DjangoGantt.png Graphic file (type eps)
 
 <./gazou/DjangoGantt.png> [3] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 44.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 44.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
 ) (./chap4.tex
-Overfull \hbox (171.60631pt too wide) in paragraph at lines 22--32
-[][]
- []
-
-
-LaTeX Warning: File `./gazou/ss-mix_sample.png' not found on input line 38.
-
+[5]
 File: ./gazou/ss-mix_sample.png Graphic file (type eps)
-<./gazou/ss-mix_sample.png>
-File: ss-mix_sampledata.png Graphic file (type eps)
- <ss-mix_sampledata.png> [5] [6]
+ <./gazou/ss-mix_sample.png>
+File: ./gazou/ss-mix_sampledata.png Graphic file (type eps)
+ <./gazou/ss-mix_sampledata.png> [6]
 File: ./gazou/getdb.png Graphic file (type eps)
 
 <./gazou/getdb.png>
@@ -217,12 +212,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2400 strings out of 493807
- 36292 string characters out of 6151952
+ 2405 strings out of 493807
+ 36354 string characters out of 6151952
  97533 words of memory out of 5000000
- 5862 multiletter control sequences out of 15000+600000
+ 5864 multiletter control sequences out of 15000+600000
  16278 words of font info for 63 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 28i,8n,23p,288b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,11n,23p,288b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tokuron.dvi (19 pages, 37772 bytes).
+Output written on tokuron.dvi (19 pages, 40960 bytes).

@@ -1,2 +1,16 @@
-This paper presents a web app which can share healthcare
-information between patient and doctor.
+This paper presents the concept about a web application which can share healthcare information between patients and doctors.
+
+Healthcare information is not shared between patients and doctors in Japan
+because the standard for healthcare information systems is not arranged.
+
+
+
+It is waste for patients and doctors to carry out inspections to get  the same information which patients did.
+
+Accordingly, it need to develop a sharing web application can receive some different format document.
+
+This study supposes that CSV format and HL7 format documents are input documents because some hospital mainly supplying primary care don't have healthcare information system, and other hospital supplying surgery use it.
+
+The information is managed on CouchDB, and assigned keys.
+
+Therefore the application can search information that have same mean even if information made from different software.
