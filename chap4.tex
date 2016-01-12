@@ -1,21 +1,22 @@
 \subsection{アプリケーションの開発環境}
-　webアプリケーション開発にはjavascriptのwebフレームワークであるNode.jsを用いた.Node.jsのパッケージであるexpressとnanoを用いた.expressはwebフレームワークで、nanoはCouchDBのためのドライバである.
+　webアプリケーション開発にはjavascriptのwebフレームワークである
+Node.jsを用いた.Node.jsのパッケージであるExpressとnanoを用いた.
+Expressはwebフレームワークで、nanoはCouchDBのためのドライバである.
+その他に開発で使用したソフトを含めたバージョンなどの情報は付録に記載する.
 
-\begin{table}[htb]
-	\begin{tabular}{|l|c|r|r|}\hline
-	導入ソフト & ヴァージョン \\ \hline \hline
-	Node.js & 0.12.6 \\ \hline
-	Express & 4.12.1 \\ \hline
-	Passport & 未定 \\ \hline
-	\end{tabular}
-\end{table}
+
 
 
 \subsection{データベースの設計}
-	CouchDBにss-mixの仕様書から引っ張ってきたデータ格納方法およびデータ定義\cite{bibi1}に基づいてデータを格納する.CouchDBはひとつのデータベースの中に複数のドキュメントとよばれるデータ構造を保持している.このドキュメントは事前にテーブルなどで定義する必要がない.
+	CouchDBにss-mixの仕様書に記載されている
+	データ格納方法およびデータ定義\cite{bibi1}に基づいてデータを格納する.
+	CouchDBはひとつのデータベースの中に複数のドキュメントとよばれる
+	データ構造を保持している.
+	このドキュメントは事前にテーブルなどで定義する必要がなく,
+	JSON形式であれば自由に記述できる.
 
 	本研究ではひとつの医療行為に対してひとつのドキュメントで管理する.
-	ドキュメントが保持する情報を表\ref{tab:doc}に示す.
+	本研究で使用するドキュメントが保持する情報を表\ref{tab:doc}に示す.
 
 
 	\begin{table}[htb]
@@ -32,37 +33,43 @@
 		\end{center}
 	\end{table}
 
-	\begin{figure}[htbp]
-		\begin{center}
-			\includegraphics[width=5cm, bb=0 0 645 790]{./gazou/ss-mix_sample.png} %よこたて
-		\end{center}
-		\caption{データ定義}
-		\label{ss-mix_sample}
-	\end{figure}
 
-	\begin{figure}[htbp]
-		\begin{center}
-			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/ss-mix_sampledata.png}
-		\end{center}
-		\caption{データサンプル}
-		\label{ss-mix_sampledata}
-	\end{figure}
+\subsection{アプリケーションの仕様}
 
-\subsection{アプリケーションの設計}
+	\subsubsection{新規のフォーマットのファイルに対するコスト}
+	縦向き、横向きのcsv(地域の病院で生まれるような電子化された医療情報)
+	の入力に対応している.
+	行と列のどちらかに日付,他方に項目があると想定して入力ファイルから
+	医療情報をキーと値に関連付けてデータベースに登録していく.
 
-	\subsubsection{新出のフォーマットのドキュメントに対するコスト}
-	縦向き、横向きのcsv(地域の病院で生まれるような電子化された医療情報)はノーコスト.
-	電子カルテ固有の出力ファイルはHL7に対応していればノーコスト.
-	json型にもってくまでができれば入力できる.
-	出力にはkeyを関連付けるためのコストがかかるが,これは利用者がチューニングしていく.
+	電子カルテ固有の出力ファイルはHL7に対応していれば入力ファイルから
+	医療情報をキーと値に関連付けてデータベースに登録していく.
+	HL7の出力ファイルはパイプ区切りで,データの並び順に意味を持たせている.
+	この並び順と項目,データを関連付けてキーと値に置き直して
+	データベースに登録していく.
+
+	このとき,HL7のデータの並び順と項目に関する情報が
+	アプリケーション側で必要となる.
+	つまり,異なる規格の医療情報を登録する際,
+	そのフォーマットでデータをどのように意味付けしているかという情報を
+	登録するコストが新規のフォーマットのファイルを
+	アプリケーションに対応させるためにかかる.
+
+
+	\subsubsection{同義キーの登録に対するコスト}
+	医療情報の出力にはキーを関連付けるためのコストがかかる.
+	これは新しいフォーマットで医療情報が入力されるたびに生まれる作業となる.
+	これを医療関係者にさせることを想定している.
+
 
 　%医療情報を収集するNoSQLデータベースシステム.UIとしてWebアプリを用意し,
 	%医療関係者,薬剤師,患者の３者に対して,情報を扱いやすいようにした.
 
 \subsection{患者情報閲覧}
 	ユーザはログイン後,Accountタブから検索ワードを送信すると,
-	/getdbでキーに検索ワードを含むヴァリューを表示する.
-	ここで,同義のキーで管理されているヴァリューを表示するために
+	/getdbでキーに検索ワードを値に含むキーと値の組を表示する.
+
+	ここで,同義キーで管理されている項目群を表示するために
 	キー同士の関連が登録されているドキュメントを参照している.
 
 
@@ -77,7 +84,7 @@
 
 \subsection{データの投入方法}
 	ユーザはログイン後,Input Dataタブを選択する.
-	次に入力するファイルを選択し,送信する.\ref{fileiopage}
+	次に入力するファイルを選択し,送信する\ref{fileiopage}.
 
 	\begin{figure}[htbp]
 		%\begin{center}
@@ -90,11 +97,6 @@
 	１度の診療で１つのドキュメントを生成する.
 	CSV入力ファイルに複数回の診療の記録があることを許容する.
 
-
-	どうやってCouchからデータを引っ張ってきているか.
-	患者のドキュメントを検索してからデータを取得.
-
-
 		\subsubsection{縦向きcsvファイルの場合}
 			parse
 			医療大の検査データ
@@ -104,7 +106,7 @@
 					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/kensa.png}
 				%\end{center}
 				\caption{医療大の検査データ}
-				\label{ss-mix_sampledata}
+				\label{iryoudai-kensa-data}
 			\end{figure}
 
 		\subsubsection{横向きcsvファイルの場合}
@@ -116,19 +118,22 @@
 					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/touyaku.png}
 				%\end{center}
 				\caption{医療大の投薬データ}
-				\label{ss-mix_sampledata}
+				\label{iryoudai-touyaku-data}
 			\end{figure}
 
 		\subsubsection{パイプ区切りのHL7ファイルの場合}
-			parsehl7
-			HL7のデータ
-			\\
+			前述のデータ定義に基づいて入力ファイルからデータを格納していく.
+			本研究では医療規格にのっとっていない医療情報との関連付けを課題としている.
+			そこでHL7にのっとったファイルからデータを抜き出し,
+			データの配置によって割り振られている意味をキーとしてデータベースに
+			格納していく.
+
 			\begin{figure}[htbp]
 				%\begin{center}
 					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/hl7.png}
 				%\end{center}
 				\caption{HL7のサンプルデータ}
-				\label{ss-mix_sampledata}
+				\label{hl7-data}
 			\end{figure}
 
 
@@ -148,8 +153,8 @@
 	処方をキーに含むデータが検索結果として表示される.
 	さらに,検索結果に処方日があり,これは日時と同義として登録されているため,
 	日時のデータも検索結果として表示される.
-	#実装まだですが.texが嫌になった時にやります。
-	#仕様としては、処方日、日時ともにその右に日付がならびます
+	（実装まだですが.texが嫌になった時にやります。
+	仕様としては、処方日、日時ともにその右に日付がならびます。）
 
 	\begin{figure}[htbp]
 		%\begin{center}
