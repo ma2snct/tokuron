@@ -5,8 +5,6 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 その他に開発で使用したソフトを含めたバージョンなどの情報は付録に記載する.
 
 
-
-
 \subsection{データベースの設計}
 	CouchDBにss-mixの仕様書に記載されている
 	データ格納方法およびデータ定義\cite{bibi1}に基づいてデータを格納する.
@@ -60,6 +58,7 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 	医療情報の出力にはキーを関連付けるためのコストがかかる.
 	これは新しいフォーマットで医療情報が入力されるたびに生まれる作業となる.
 	これを医療関係者にさせることを想定している.
+	(実装まだです.)
 
 
 　%医療情報を収集するNoSQLデータベースシステム.UIとしてWebアプリを用意し,
@@ -71,6 +70,8 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 
 	ここで,同義キーで管理されている項目群を表示するために
 	キー同士の関連が登録されているドキュメントを参照している.
+	\\
+	\\
 
 
 
@@ -97,10 +98,21 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 	１度の診療で１つのドキュメントを生成する.
 	CSV入力ファイルに複数回の診療の記録があることを許容する.
 
-		\subsubsection{縦向きcsvファイルの場合}
-			parse
-			医療大の検査データ
-			\\
+		%\subsubsection{縦向きcsvファイルの場合}
+		\subsubsection{CSVファイルの場合}
+			CSVファイルは入力ファイルの行,列のどちらかに医療情報,
+			他方に日付をとっているものを想定している.
+			図\ref{csv-data-trans}は入力内容とCouchDBへの登録内容の
+			対応を表したものである.
+
+			\begin{figure}[htbp]
+				%\begin{center}
+					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/csv-data-trans.png}
+				%\end{center}
+				\caption{入力内容とDB登録内容の対応}
+				\label{csv-data-trans}
+			\end{figure}
+
 			\begin{figure}[htbp]
 				%\begin{center}
 					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/kensa.png}
@@ -109,10 +121,13 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 				\label{iryoudai-kensa-data}
 			\end{figure}
 
+		\if0
 		\subsubsection{横向きcsvファイルの場合}
 			holizontialparse
 			医療大の投薬データ
-			\\
+		\fi
+
+
 			\begin{figure}[htbp]
 				%\begin{center}
 					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/touyaku.png}
@@ -121,12 +136,30 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 				\label{iryoudai-touyaku-data}
 			\end{figure}
 
-		\subsubsection{パイプ区切りのHL7ファイルの場合}
-			前述のデータ定義に基づいて入力ファイルからデータを格納していく.
+		\subsubsection{HL7ファイルの場合}
+			前述のHL7のデータ定義に基づいて入力ファイルからデータを格納していく.
+
+			HL7の出力ファイルはパイプ区切りで記述されており,
+			並び順にデータの意味が割り振られている.
+			図\ref{hl7-data-trans}の枠内のデータがOBX-3という
+			セグメントのデータである.
+			このセグメントの意味をアプリケーション内のテーブルから参照し,
+			意味とデータをJSON形式に整形してCouchDBに登録する.
+
+
+
 			本研究では医療規格にのっとっていない医療情報との関連付けを課題としている.
 			そこでHL7にのっとったファイルからデータを抜き出し,
 			データの配置によって割り振られている意味をキーとしてデータベースに
 			格納していく.
+
+			\begin{figure}[htbp]
+				%\begin{center}
+					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/hl7-data-trans.png}
+				%\end{center}
+				\caption{HL7の生データからJSONへの変化}
+				\label{hl7-data-trans}
+			\end{figure}
 
 			\begin{figure}[htbp]
 				%\begin{center}
@@ -157,9 +190,7 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 	仕様としては、処方日、日時ともにその右に日付がならびます。）
 
 	\begin{figure}[htbp]
-		%\begin{center}
 			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/relation.png}
-		%\end{center}
 		\caption{同義キーを管理するドキュメント}
 		\label{relation}
 	\end{figure}
