@@ -1,4 +1,5 @@
 \subsection{アプリケーションの開発環境}
+	todo:３章の最後とつなげて、どういう意図で設計しているかを説明する.
 　webアプリケーション開発にはjavascriptのwebフレームワークである
 Node.jsを用いた.Node.jsのパッケージであるExpressとnanoを用いた.
 Expressはwebフレームワークで、nanoはCouchDBのためのドライバである.
@@ -15,6 +16,17 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 
 	本研究ではひとつの医療行為に対してひとつのドキュメントで管理する.
 	本研究で使用するドキュメントが保持する情報を表\ref{tab:doc}に示す.
+
+	CouchDBのドキュメントのJSONの内容を図\ref{json-for-doc}に示す.
+	必須の項目である\_id,\_rev以外にdata要素だけを用意した.
+	今後,必要になったときに他の要素を追記することができる.
+	\\
+
+	\begin{figure}[htbp]
+			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/json-for-doc.png}
+		\caption{ドキュメントのJSONの構造}
+		\label{json-for-doc}
+	\end{figure}
 
 
 	\begin{table}[htb]
@@ -58,11 +70,7 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 	医療情報の出力にはキーを関連付けるためのコストがかかる.
 	これは新しいフォーマットで医療情報が入力されるたびに生まれる作業となる.
 	これを医療関係者にさせることを想定している.
-	(実装まだです.)
 
-
-　%医療情報を収集するNoSQLデータベースシステム.UIとしてWebアプリを用意し,
-	%医療関係者,薬剤師,患者の３者に対して,情報を扱いやすいようにした.
 
 \subsection{患者情報閲覧}
 	ユーザはログイン後,Accountタブから検索ワードを送信すると,
@@ -78,14 +86,14 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 		\begin{figure}[htbp]
 				\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/getdb.png}
 			\caption{薬　でデータ抽出した様子}
-			\label{ss-mix_sampledata}
+			\label{getdb}
 		\end{figure}
 
 
 
 \subsection{データの投入方法}
 	ユーザはログイン後,Input Dataタブを選択する.
-	次に入力するファイルを選択し,送信する\ref{fileiopage}.
+	次に入力するファイルを選択し,送信する(図\ref{fileiopage}).
 
 	\begin{figure}[htbp]
 		%\begin{center}
@@ -107,7 +115,7 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 
 			\begin{figure}[htbp]
 				%\begin{center}
-					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/csv-data-trans.png}
+					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/csv-data-trans2.png}
 				%\end{center}
 				\caption{入力内容とDB登録内容の対応}
 				\label{csv-data-trans}
@@ -115,7 +123,7 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 
 			\begin{figure}[htbp]
 				%\begin{center}
-					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/kensa.png}
+					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/kensa-data.png}
 				%\end{center}
 				\caption{医療大の検査データ}
 				\label{iryoudai-kensa-data}
@@ -130,7 +138,7 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 
 			\begin{figure}[htbp]
 				%\begin{center}
-					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/touyaku.png}
+					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/touyaku-data.png}
 				%\end{center}
 				\caption{医療大の投薬データ}
 				\label{iryoudai-touyaku-data}
@@ -155,7 +163,7 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 
 			\begin{figure}[htbp]
 				%\begin{center}
-					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/hl7-data-trans.png}
+					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/hl7-data-trans2.png}
 				%\end{center}
 				\caption{HL7の生データからJSONへの変化}
 				\label{hl7-data-trans}
@@ -163,7 +171,7 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 
 			\begin{figure}[htbp]
 				%\begin{center}
-					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/hl7.png}
+					\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/hl7-data.png}
 				%\end{center}
 				\caption{HL7のサンプルデータ}
 				\label{hl7-data}
@@ -190,14 +198,14 @@ Expressはwebフレームワークで、nanoはCouchDBのためのドライバ�
 	仕様としては、処方日、日時ともにその右に日付がならびます。）
 
 	\begin{figure}[htbp]
-			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/relation.png}
+			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/relation2.png}
 		\caption{同義キーを管理するドキュメント}
 		\label{relation}
 	\end{figure}
 
 	\begin{figure}[htbp]
 		%\begin{center}
-			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/relationApp.png}
+			\includegraphics[width=5cm, bb=0 0 437 688]{./gazou/relationApp2.png}
 		%\end{center}
 		\caption{処方と検索して同義キーとして登録されている日時を表示する}
 		\label{relationApp}

@@ -8,6 +8,9 @@
 
 
 \subsection{SQL版の概要}
+  どういう意図（どういう使用方法を想定しているか）で作ったかということと、その意図に対
+  応する機能という形で書きましょう。
+
   特定の病気にかかっている複数人の患者の医療情報が記載された
   エクセルファイルを医療関係者から提供していただいた.
   医療情報として検査値,投薬についての情報などが記載されていた.
@@ -28,6 +31,8 @@
 
 
 \subsection{SQL版が有する機能}
+  todo:設計方法が分かる図
+
   \subsubsection{データ入力}
     データベースには提供していただいたエクセルファイルの記述方法に対応する
     SQLのテーブルを用意している.
@@ -76,7 +81,7 @@
 
 
     \begin{figure}[htbp]
-        \includegraphics[width=5cm, bb=0 0 437 688]{./gazou/DjangoFileio.png}
+        \includegraphics[width=5cm, bb=0 0 437 688]{./gazou/DjangoFileio2.png}
       \caption{データ入力画面}
       \label{DjangoFileio}
     \end{figure}
@@ -88,13 +93,13 @@
     \end{figure}
 
     \begin{figure}[htbp]
-        \includegraphics[width=5cm, bb=0 0 437 688]{./gazou/DjangoGantt.png}
+        \includegraphics[width=5cm, bb=0 0 437 688]{./gazou/DjangoGantt2.png}
       \caption{ガントチャートによるデータ閲覧}
       \label{DjangoGantt}
     \end{figure}
 
 
-\if0
+
 \subsection{SQL版の課題とフィードバック}
 
   開発アプリのデモンストレーションをデータを提供していただいた
@@ -106,9 +111,10 @@
   例えば,表によるデータの表示に対するフィードバックとして,
   任意の検査項目にハイライトをつけてほしいといった内容であったが,
   本研究で工数を割くことができなかったため開発を見送った.
-\fi
+
 
 \subsection{NoSQL版の目標設定}
+  todo:２章の話も拾う
   ひとつのフォーマットのみならず,
   これらのファイルでの入力を入力を受け付ける
   WebアプリケーションをCouchDBを用いて実装する.
