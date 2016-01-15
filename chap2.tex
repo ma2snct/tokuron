@@ -1,4 +1,8 @@
 \subsection{知識}
+  2015年現在,日本国内には電子カルテの出力ファイルや,
+  医療関係者が独自に生成したエクセルファイルまで
+  様々な形式で医療情報が電子化されている.
+  主な例を以下に示す.
 
   \subsubsection{HL7 \cite{bibi5} \cite{bibi6} }
   HL7とはHealth Level Sevenの略称である.
@@ -12,28 +16,33 @@
   また,図\ref{ss-mix_sampledata}が
   その出力データのサンプルである.
 
-
 	\begin{figure}[htbp]
-			\includegraphics[width=5cm, bb=0 0 450 600]{./gazou/ss-mix_sample.png} %よこたて
-		\caption{データ定義}
+    \begin{center}
+			\includegraphics[width=12cm, bb=0 0 792 630]{./gazou/ss-mix_sample.png} %よこたて
+    \end{center}
+    \caption{データ定義}
 		\label{ss-mix_sample}
 	\end{figure}
 
 	\begin{figure}[htbp]
-			\includegraphics[width=5cm, bb=0 0 300 600]{./gazou/ss-mix_sampledata.png}
-		\caption{データサンプル}
+    \begin{center}
+			\includegraphics[width=12cm, bb=0 0 688 437, clip]{./gazou/ss-mix_sampledata.png}
+    \end{center}
+    \caption{データサンプル}
 		\label{ss-mix_sampledata}
 	\end{figure}
 
 
 
-  \subsubsection{SQL,NoSQLについて}
+  \subsubsection{かかりつけ医が生成するエクセルファイル}
+  三重県内の電子カルテを導入していない規模の医療機関の診療情報が
+  エクセルのファイルで提供された.
 
 
 
-\subsection{本研究の類似製品,研究}
-  後述する既存アプリID-Linkなどは患者idをリンクしているだけで
-  情報を一元的に集約はしていない.
+\subsection{本研究の類似製品,活動}
+  国内の主な医療情報の共有に関する活動や製品を以下に示す.
+
 
   \subsubsection{ID-Link}
     ID-Linkは地域内の病院の患者IDを一元管理することで,
@@ -63,3 +72,6 @@
 
     あじさいネットは10年にわたる活動の中でアンケートを繰り返し,
     会費だけで運用することができるシステムになっていった.
+
+%todo:いろんな規格がある、ユーザサイドから
+%データが生成されるといった話を盛り込み、４章につなげる
