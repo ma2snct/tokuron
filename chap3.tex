@@ -19,12 +19,29 @@
   二者で異なる使い方ができるようにした.
   \fi
 
+
   鈴鹿医療科学大学からある病気にかかっている患者の検査値と
   投薬に関する情報が記載されたエクセルファイルを提供していただいた.
   これをサンプルとして用いて医療情報を共有することができる
   Webアプリケーションを開発した.
   電子カルテや医療情報共有ソフトを導入できない医療機関でも
   患者の医療情報を共有できるようにすることが目的である.
+
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics[width=10cm, bb=0 0 1049 733]{./gazou/excel-data.png}
+    \end{center}
+    \caption{エクセルファイルの例}
+    \label{excel-data}
+  \end{figure}
+
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics[width=10cm, bb=0 0 850 411]{./gazou/excel-data-medicine.png}
+    \end{center}
+    \caption{内服薬のエクセルファイルの例}
+    \label{excel-data-medicine}
+  \end{figure}
 
 
 \subsection{想定する利用方法}
@@ -48,22 +65,31 @@
   %医療関係者に既往歴を閲覧させることができる.
 
 
-\subsection{機能}
-  システム構成は図\ref{system_construct}のようになっている.
-  矢印が指す機能が患者や医療関係者が利用することができる
-  機能である.
+\subsection{設計}
+  システムのユースケース図とクラス図は
+  図\ref{system_construct},
+  図\ref{class}のようになっている.
   医療関係者は患者の医療情報の閲覧と書き込みの機能を利用する際,
   患者から認可が出ていることが必要となる.
   患者は医療機関係者に認可を出す権限を持っている.
 
   \begin{figure}[htbp]
     \begin{center}
-      \includegraphics[width=10cm, bb=0 0 738 568]{./gazou/system_construct.png}
+      \includegraphics[width=10cm, bb=0 0 1003 768]{./gazou/system_construct2.png}
     \end{center}
-    \caption{システム構成}
+    \caption{システムのUMLユースケース図}
     \label{system_construct}
   \end{figure}
 
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics[width=10cm, bb=0 0 916 760]{./gazou/class.png}
+    \end{center}
+    \caption{UMLクラス図}
+    \label{class}
+  \end{figure}
+
+\subsection{機能}
   \subsubsection{権限の付与}
     患者の医療情報をどの医療関係者が操作することができるかを
     患者自身が選択する.
