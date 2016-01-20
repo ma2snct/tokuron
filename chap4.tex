@@ -1,7 +1,4 @@
 \subsection{NoSQL版の概要}
-	could do : UMLユースケース図
-	could do : 薬で検索したとき、複数日のデータがでるように
-
 	２章で述べたように,医療の現場からは電子カルテや血圧計の
 	出力ファイルとして様々な形式のファイルが出力される.
 	この形式は医療機関が導入しているソフトに依存しているため,
@@ -34,13 +31,14 @@
 
 \subsection{アプリケーションの開発環境}
 
-　webアプリケーション開発にはjavascriptのwebフレームワークである
+　Webアプリケーション開発にはjavascriptのWebフレームワークである
 	Node.jsを用いた.Node.jsのパッケージであるExpressとnanoを用いた.
-	Expressはwebフレームワークで、nanoはNoSQLであるCouchDBのためのドライバである.
+	ExpressはWebフレームワークで、nanoはNoSQLであるCouchDBのためのドライバである.
 	その他に開発で使用したソフトを含めたバージョンなどの情報は付録に記載する.
 
 
-\subsection{データベースの設計}
+\subsection{設計}
+\subsubsection{データベース}
 	CouchDBはひとつのデータベースの中に複数のドキュメントとよばれる
 	データ構造を保持している.
 	このドキュメントは事前にテーブルなどで定義する必要がなく,
@@ -56,7 +54,7 @@
 
 	\begin{figure}[htbp]
 		\begin{center}
-			\includegraphics[width=10cm, bb=0 0 1027 737]{./gazou/json-for-doc.png}
+			\includegraphics[width=10cm, bb=0 0 1027 737]{./gazou/json-for-doc2.png}
 		\end{center}
 		\caption{ドキュメントのJSONの構造}
 		\label{json-for-doc}
@@ -68,8 +66,8 @@
 			\caption{ドキュメントが保持する情報}
 			\begin{tabular}{|l|c|r|r|}\hline
 			Key & Value \\ \hline \hline
-			id &  患者名、ドキュメント作成日をドキュメントIDとしている. \\ \hline
-			rev & \shortstack{ドキュメントの更新回数を示す. \\ 更新時に参照し競合を防ぐ.} \\ \hline
+			\_id &  患者名、ドキュメント作成日をドキュメントIDとしている. \\ \hline
+			\_rev & \shortstack{ドキュメントの更新回数を示す. \\ 更新時に参照し競合を防ぐ.} \\ \hline
 			%name & 患者の名前 \\ \hline
 			data & \shortstack{医療行為によって得られた情報を \\ json形式で格納.} \\ \hline
 			\end{tabular}
@@ -78,7 +76,9 @@
 	\end{table}
 
 
-\subsection{アプリケーションの仕様}
+	\subsubsection{アプリケーション}
+		UMLクラス図はSQL版から認可に関する機能,要素を省いたものとなる.
+
 
 	\subsubsection{対応する入力ファイル}
 	エクセルファイル(地域の病院で生まれるような電子化された医療情報)
@@ -111,7 +111,8 @@
 	ドキュメント名の日付が前後しているが,
 	これはデータを入力したときの日付であるため,
 	日付の順序は意味を持ってはいない.
-	
+	(図\ref{getdb})
+
 
 		\begin{figure}[htbp]
 			\begin{center}
@@ -216,7 +217,7 @@
 	データを参照するときに,キーが必要となる.キーには様々な意味を持つものがあるが,
 	異なる規格のデータでは同じ情報を指し示すキーであっても,
 	異なるキーが使われている.
-	これは新規の規格が医療情報ソフトに流入するたびに課題となる.
+	これは新規の規格が医療情報ソフトに導入されるたびに課題となる.
 
 	そこで,本研究ではユーザによる同義キーの登録の機能を用意した.
 	ユーザは同義である２つのキーを入力すると
@@ -226,7 +227,7 @@
 	図\ref{relationApp}では検索ワードは処方であるので
 	処方をキーに含むデータが検索結果として表示される.
 	さらに,検索結果に処方日があり,これは日時と同義として登録されているため,
-	日時のデータも検索結果として表示される.（図\ref{relationApp}）
+	日時のデータも検索結果として表示される.
 
 	\begin{figure}[htbp]
 		\begin{center}
@@ -238,7 +239,7 @@
 
 	\begin{figure}[htbp]
 		\begin{center}
-			\includegraphics[width=15cm, bb=0 0 1366 768, clip]{./gazou/relationApp2.png}
+			\includegraphics[width=15cm, bb=0 0 609 528, clip]{./gazou/relationApp3.png}
 		\end{center}
 		\caption{処方と検索して同義キーとして登録されている日時も表示する}
 		\label{relationApp}

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.5-130605-2.6 (utf8.euc) (TeX Live 2014) (preloaded format=platex 2015.4.3)  18 JAN 2016 17:29
+This is e-pTeX, Version 3.14159265-p3.5-130605-2.6 (utf8.euc) (TeX Live 2014) (preloaded format=platex 2015.4.3)  20 JAN 2016 13:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -110,24 +110,23 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 16.
- (./abst.tex) (./abstJapanese
+ (./abst.tex) (./abstJapanese [1]) [2] (./tokuron.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 14.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 14.
-) [1] (./tokuron.toc
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
- [1
+
+[1
 
 ])
 \tf@toc=\write3
 \openout3 = `tokuron.toc'.
 
-
-[2] (./chap1.tex
+ [2] (./chap1.tex
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
@@ -162,9 +161,9 @@ File: ./gazou/DjangoTable2.png Graphic file (type eps)
 File: ./gazou/DjangoGantt2.png Graphic file (type eps)
 
 <./gazou/DjangoGantt2.png> [7] [8] [9]) [10] (./chap4.tex
-File: ./gazou/json-for-doc.png Graphic file (type eps)
+File: ./gazou/json-for-doc2.png Graphic file (type eps)
 
-<./gazou/json-for-doc.png> [11
+<./gazou/json-for-doc2.png> [11
 
 ] [12]
 File: ./gazou/getdb2.png Graphic file (type eps)
@@ -178,30 +177,30 @@ File: ./gazou/kensa-data.png Graphic file (type eps)
 
 <./gazou/kensa-data.png>
 File: ./gazou/touyaku-data.png Graphic file (type eps)
- <./gazou/touyaku-data.png>
+ <./gazou/touyaku-data.png> [13] [14] [15] [16]
 File: ./gazou/hl7-data-trans2.png Graphic file (type eps)
 
-<./gazou/hl7-data-trans2.png> [13] [14] [15] [16]
+<./gazou/hl7-data-trans2.png>
 File: ./gazou/hl7-data.png Graphic file (type eps)
  <./gazou/hl7-data.png>
 File: ./gazou/relation2.png Graphic file (type eps)
+ <./gazou/relation2.png>
+File: ./gazou/relationApp3.png Graphic file (type eps)
 
-<./gazou/relation2.png>
-File: ./gazou/relationApp2.png Graphic file (type eps)
- <./gazou/relationApp2.png> [17] [18] [19]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 257.
+<./gazou/relationApp3.png> [17] [18] [19]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 258.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 257.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 258.
 ) [20]
 (./chap5.tex) [21
 
-] (./chap6.tex)
-Overfull \hbox (42.40614pt too wide) in paragraph at lines 78--79
+]
+Overfull \hbox (48.28108pt too wide) in paragraph at lines 87--88
 []\JY1/mc/m/n/12 第 \OT1/cmr/m/n/12 13 \JY1/mc/m/n/12 回 \OT1/cmr/m/n/12 HL7 \J
 Y1/mc/m/n/12 セミナ ー \OT1/cmr/m/n/12 HL7 \JY1/mc/m/n/12 入門\OT1/cmr/m/n/12 ,
 http://www.hl7.jp/docs/seminar/SeminarNo13Kawamata.pdf 
@@ -209,26 +208,26 @@ http://www.hl7.jp/docs/seminar/SeminarNo13Kawamata.pdf
 
 [22
 
-] [23] (./tokuron.lof)
+] (./tokuron.lof)
 \tf@lof=\write4
 \openout4 = `tokuron.lof'.
 
- [24
+ [23
 
 ] (./tokuron.lot)
 \tf@lot=\write5
 \openout5 = `tokuron.lot'.
 
- [25
+ [24
 
 ] (./tokuron.aux) ) 
 Here is how much of TeX's memory you used:
- 2431 strings out of 493807
- 36877 string characters out of 6151952
+ 2426 strings out of 493807
+ 36839 string characters out of 6151952
  97533 words of memory out of 5000000
- 5883 multiletter control sequences out of 15000+600000
+ 5881 multiletter control sequences out of 15000+600000
  16278 words of font info for 63 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 28i,11n,23p,242b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,11n,23p,238b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tokuron.dvi (29 pages, 58440 bytes).
+Output written on tokuron.dvi (29 pages, 59292 bytes).

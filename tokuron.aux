@@ -7,24 +7,26 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2}関連研究,従来DB}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}知識}{2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}HL7}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces データ定義}}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces HL7のデータ定義}}{2}}
 \newlabel{ss-mix_sample}{{1}{2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}かかりつけ医が生成するエクセルファイル}{2}}
+\citation{bibi12}
 \citation{bibi7}
 \citation{bibi3}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces データサンプル}}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces HL7の出力データの例}}{3}}
 \newlabel{ss-mix_sampledata}{{2}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}本研究の類似製品,活動}{3}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}ID-Link}{3}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}SS-MIX}{3}}
+\citation{bibi3}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}あじさいネット}{4}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}準備研究}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}SQL版の概要}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces エクセルファイルの例}}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 検査値のエクセルファイルの例}}{5}}
 \newlabel{excel-data}{{3}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 内服薬のエクセルファイルの例}}{5}}
-\newlabel{excel-data-medicine}{{4}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}想定する利用方法}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}想定する利用方法}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 内服薬のエクセルファイルの例}}{6}}
+\newlabel{excel-data-medicine}{{4}{6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}設計}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces システムのUMLユースケース図}}{6}}
 \newlabel{system_construct}{{5}{6}}
@@ -44,18 +46,19 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4}開発}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}NoSQL版の概要}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}アプリケーションの開発環境}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}データベースの設計}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}設計}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}データベース}{11}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces ドキュメントのJSONの構造}}{12}}
 \newlabel{json-for-doc}{{10}{12}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces ドキュメントが保持する情報}}{12}}
 \newlabel{tab:doc}{{1}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}アプリケーションの仕様}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}対応する入力ファイル}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}同義キーの登録}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}患者情報閲覧}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}データの投入方法}{13}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.1}CSVファイルの場合}{13}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.2}HL7ファイルの場合}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}アプリケーション}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}対応する入力ファイル}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4}同義キーの登録}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}患者情報閲覧}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}データの投入方法}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}CSVファイルの場合}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}HL7ファイルの場合}{13}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces 白血球　でデータ抽出した様子}}{14}}
 \newlabel{getdb}{{11}{14}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces ファイル入力ページ}}{15}}
@@ -66,7 +69,7 @@
 \newlabel{iryoudai-kensa-data}{{14}{16}}
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces 医療大の投薬データ}}{17}}
 \newlabel{iryoudai-touyaku-data}{{15}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}同義キーの活用}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}同義キーの活用}{17}}
 \@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces HL7の生データからJSONへの変化}}{18}}
 \newlabel{hl7-data-trans}{{16}{18}}
 \@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces HL7のサンプルデータ}}{18}}
@@ -75,23 +78,19 @@
 \newlabel{relation}{{18}{19}}
 \@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces 処方と検索して同義キーとして登録されている日時も表示する}}{19}}
 \newlabel{relationApp}{{19}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}NoSQL版のまとめ}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}NoSQL版のまとめ}{20}}
 \citation{bibi10}
 \@writefile{toc}{\contentsline {section}{\numberline {5}結果・考察}{21}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}実装した機能とそれによって解決した課題}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}運用に向けて}{21}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}データの信頼性}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}データの信頼性}{21}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}本研究の意義}{21}}
-\bibcite{bibi1}{1}
-\bibcite{bibi2}{2}
-\bibcite{bibi3}{3}
-\bibcite{bibi4}{4}
-\bibcite{bibi6}{5}
+\bibcite{bibi2}{1}
+\bibcite{bibi6}{2}
+\bibcite{bibi5}{3}
+\bibcite{bibi12}{4}
+\bibcite{bibi1}{5}
 \bibcite{bibi7}{6}
-\bibcite{bibi5}{7}
+\bibcite{bibi3}{7}
 \bibcite{bibi8}{8}
 \bibcite{bibi9}{9}
 \bibcite{bibi10}{10}
-\bibcite{bibi11}{11}
-\bibcite{bibi12}{12}
-\@writefile{toc}{\contentsline {section}{\numberline {6}言葉の定義（清書で削除）}{22}}
