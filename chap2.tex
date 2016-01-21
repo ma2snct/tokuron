@@ -1,4 +1,4 @@
-\subsection{知識}
+\subsection{医療情報のフォーマット}
   2015年現在,日本国内には電子カルテの出力ファイルや,
   医療関係者が独自に生成したエクセルファイルまで
   様々な形式で医療情報が電子化されている.
@@ -38,6 +38,22 @@
   本研究のために鈴鹿医療科学大学から三重県内の電子カルテを導入していない規模の
   医療機関の診療情報がエクセルのファイルで提供された.
 
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics[width=13cm, bb=0 0 1049 733]{./gazou/excel-data.png}
+    \end{center}
+    \caption{検査値のエクセルファイルの例}
+    \label{excel-data}
+  \end{figure}
+
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics[width=13cm, bb=0 0 850 411]{./gazou/excel-data-medicine.png}
+    \end{center}
+    \caption{内服薬のエクセルファイルの例}
+    \label{excel-data-medicine}
+  \end{figure}
+
 
 
 \subsection{本研究の類似製品,活動}
@@ -65,7 +81,7 @@
     これにはHL7が採用されている.
     \cite{bibi7}
 
-  \subsubsection{あじさいネット}\cite{bibi3}
+  \subsubsection{あじさいネット}
     ２００４年に長崎県大村市で始まり、２０１２年には,
     県域をカバーする地域医療連携ネットワークとして発展してきた.
     ２０１３年４月現在において,電子カルテなどの患者情報の提供を
@@ -76,3 +92,9 @@
     あじさいネットは10年にわたる活動の中でアンケートを繰り返し,
     会費だけで運用することができるシステムになっていった.
     \cite{bibi3}
+
+\subsection{データベース}
+  CouchDBはひとつのデータベースの中に複数のドキュメントとよばれる
+  データ構造を保持している.
+  このドキュメントは事前にテーブルなどで定義する必要がなく,
+  JSON形式であれば自由に記述できる.

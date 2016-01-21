@@ -1,33 +1,31 @@
-This paper presents the concept about a web application
-which can share healthcare information between patients and doctors.
-Healthcare information is not shared between patients and doctors
-in Japan
+This paper presents the concept about a web application, i
+n which patients and medical workers can share healthcare information each otherbetween patients and doctors.
+Healthcare information has is not been shared between patients and medical workersdoctors
+in Japan, since
 because the standard for healthcare information systems
-is not arranged.
+had is not been arrangedestablished..
 
-It is waste for patients and doctors to carry out inspections
+It is a waste of time and money for patients and doctors medical workers to inspect a patient to get almost same medical information in different pospitalscarry out inspections
 to get  the same information which patients did.
 If it isn't done, patients and doctors can save medical cost.
 Accordingly, it need to develop a sharing web application can receive some different format document.
 
-This study supposes that CSV format and HL7 format documents
-are input documents.
+Theis proposed systemstudy supportses that CSV format and HL7 format documents a
+s are input  documents. HL7 is a set of standard for transfer clinical information data between software applications developed by various vender.
 Because some hospitals mainly supplying
 primary care use Excel instead of healthcare information system.
 And other hospital supplying surgery use the system.
 it can output data in HL7 format.
 Thereby, it can let hospitals share healthcare information.
 
-The information is managed on CouchDB,
-and assigned keys.
-Keys are made from different formats.
-So, some words are used as same semantic keys.
-And, the same semantic keys are connected
+The information is stored inmanaged on CouchDB,
+which is a type of document database management system using key and valueand assigned keys.
+Keys, the word of clinical information item, are named as different words by each management systems. made from different formats.
+Thus So, some words are have to be used as same semantic keys.
+In additionAnd, the same semantic keys must beare connected
 to use as the same semantic data.
-Therefore, the application can search information
-that have same mean even if information made from different software.
+This function enables Therefore, the application tocan search information
+that the key have almost same meaning, even if the information made from different softwares.
 
-This application using NoSQL can collect healthcare information
-which is written in some format.
-If the function which arrange data are added,
-this application can show visualize data as well.
+
+最後の一文は医療DBをつくったというところまで戻って、グッとくる文でまとめてください。

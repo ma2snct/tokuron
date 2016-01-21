@@ -15,7 +15,7 @@ system the patient has become the subject}
 
 \begin{abstract}
 \input{abst}
-\input{abstJapanese}
+%\input{abstJapanese}
 \end{abstract}
 
 \pagenumbering{roman}
@@ -33,11 +33,15 @@ system the patient has become the subject}
 \input{chap2}
 \clearpage
 
-\section{準備研究}
+\section{目的}
+\input{design}
+\clearpage
+
+\section{患者が主体の情報共有データベースシステム}
 \input{chap3}
 \clearpage
 
-\section{開発}
+\section{複数フォーマットに対応した情報共有データベースシステム}
 \input{chap4}
 \clearpage
 
@@ -48,17 +52,18 @@ system the patient has become the subject}
 \clearpage
 
 
-%\section{言葉の定義（清書で削除）}
-%\input{chap6}
-
-
 \appendix
 
-\section*{付録}
+%\section*{謝辞}
+%本研究の遂行,論文作成にあたり,
+%多大なご指導を賜りました鈴鹿工業高等専門学校電子情報工学科
+%青山俊弘准教授に心から感謝致します.
+%また,研究を共にした青山研究室のみなさまにも感謝致します.
 
+\section*{付録}
 \begin{table}[htb]
 	\begin{tabular}{|l|c|r|r|}\hline
-	導入ソフト, & バージョン \\ \hline \hline
+	導入ソフト & バージョン \\ \hline \hline
 	Node.js & 0.12.6 \\ \hline
 	Express & 4.12.1 \\ \hline
 	Passport & 0.3.2 \\ \hline
@@ -77,14 +82,16 @@ system the patient has become the subject}
 
 
 
+
+
 \begin{thebibliography}{12}
 	%背景
 	\bibitem{bibi2} 国立病院機構における診療情報分析システムについて・川島直美ら,情報処理学会デジタルプラクティス2013年15号
 
 
 	%HL7
-	\bibitem{bibi6} 日本HL7協会ホームページ,http://www.hl7.jp
-  \bibitem{bibi5} 第13回HL7セミナー HL7入門,http://www.hl7.jp/docs/seminar/SeminarNo13Kawamata.pdf
+	\bibitem{bibi5} 日本HL7協会ホームページ,http://www.hl7.jp
+  \bibitem{bibi6} 第13回HL7セミナー HL7入門,http://www.hl7.jp/docs/seminar/SeminarNo13Kawamata.pdf
 
 	%ID-Link
   \bibitem{bibi12} ID-Link mykarte.com｜地域医療連携ネットワークサービス｜株式会社エスイーシー,www.mykarte.org/idlink/
