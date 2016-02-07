@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.5-130605-2.6 (utf8.euc) (TeX Live 2014) (preloaded format=platex 2015.4.3)  21 JAN 2016 15:29
+This is e-pTeX, Version 3.14159265-p3.5-130605-2.6 (utf8.euc) (TeX Live 2014) (preloaded format=platex 2015.4.3)  7 FEB 2016 22:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -125,55 +125,59 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [1
 
-] [2] (./chap1.tex
+] (./chap1.tex
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
-)
-[1
-
-] (./chap2.tex
-File: ./gazou/ss-mix_sample.png Graphic file (type eps)
- <./gazou/ss-mix_sample.png>
-File: ./gazou/ss-mix_sampledata.png Graphic file (type eps)
- <./gazou/ss-mix_sampledata.png>
-File: ./gazou/excel-data.png Graphic file (type eps)
-
-<./gazou/excel-data.png>
-File: ./gazou/excel-data-medicine.png Graphic file (type eps)
- <./gazou/excel-data-medicine.png> [2
-
-] [3] [4])
-[5] (./design.tex
-File: ./gazou/system_construct2.png Graphic file (type eps)
- <./gazou/system_construct2.png>
-File: ./gazou/class.png Graphic file (type eps)
- <./gazou/class.png>) [6
+) [1
 
 ]
-[7] (./chap3.tex
-File: ./gazou/DjangoFileio2.png Graphic file (type eps)
- <./gazou/DjangoFileio2.png>
+(./chap2.tex
+File: ./gazou/ss-mix_sample.png Graphic file (type eps)
+ <./gazou/ss-mix_sample.png>
+Overfull \hbox (59.18173pt too wide) in paragraph at lines 21--22
+ [] 
+ []
+
+File: ./gazou/ss-mix_sampledata.png Graphic file (type eps)
+<./gazou/ss-mix_sampledata.png>
+File: ./gazou/excel-data.png Graphic file (type eps)
+ <./gazou/excel-data.png>
+File: ./gazou/excel-data-medicine.png Graphic file (type eps)
+
+<./gazou/excel-data-medicine.png> [2
+
+] [3] [4] [5]) [6] (./design.tex
+File: ./gazou/system_construct2.png Graphic file (type eps)
+
+<./gazou/system_construct2.png>
+File: ./gazou/class.png Graphic file (type eps)
+ <./gazou/class.png> [7
+
+]) [8] (./chap3.tex
+[9
+
+]
+File: ./gazou/DjangoFileio4.png Graphic file (type eps)
+ <./gazou/DjangoFileio4.png>
 File: ./gazou/DjangoTable2.png Graphic file (type eps)
  <./gazou/DjangoTable2.png>
 File: ./gazou/DjangoGantt2.png Graphic file (type eps)
 
-<./gazou/DjangoGantt2.png> [8
-
-] [9] [10]) [11] (./chap4.tex
+<./gazou/DjangoGantt2.png> [10] [11]) [12] (./chap4.tex
 File: ./gazou/json-for-doc2.png Graphic file (type eps)
 
-<./gazou/json-for-doc2.png> [12
-
-]
+<./gazou/json-for-doc2.png>
 File: ./gazou/getdb2.png Graphic file (type eps)
- <./gazou/getdb2.png>
-File: ./gazou/relation2.png Graphic file (type eps)
- <./gazou/relation2.png>
-File: ./gazou/relationApp3.png Graphic file (type eps)
+ <./gazou/getdb2.png> [13
 
-<./gazou/relationApp3.png>
+] [14]
+File: ./gazou/relation2.png Graphic file (type eps)
+
+<./gazou/relation2.png>
+File: ./gazou/relationApp4.png Graphic file (type eps)
+ <./gazou/relationApp4.png>
 File: ./gazou/fileiopage.png Graphic file (type eps)
  <./gazou/fileiopage.png>
 File: ./gazou/csv-data-trans2.png Graphic file (type eps)
@@ -188,52 +192,58 @@ File: ./gazou/blood-data.png Graphic file (type eps)
  <./gazou/blood-data.png>
 File: ./gazou/blood-data-couch.png Graphic file (type eps)
 
-<./gazou/blood-data-couch.png> [13] [14] [15] [16] [17] [18]
+<./gazou/blood-data-couch.png> [15] [16] [17] [18] [19]
 File: ./gazou/hl7-data-trans2.png Graphic file (type eps)
 
 <./gazou/hl7-data-trans2.png>
 File: ./gazou/hl7-data.png Graphic file (type eps)
  <./gazou/hl7-data.png>
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 206.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 212.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 206.
-) [19] [20]
-(./chap5.tex [21
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 212.
+) [20] [21]
+[22] (./chap5.tex [23
 
-]) [22]
-Overfull \hbox (48.28108pt too wide) in paragraph at lines 94--95
+]) [24]
+Overfull \hbox (48.28108pt too wide) in paragraph at lines 99--100
 []\JY1/mc/m/n/12 第 \OT1/cmr/m/n/12 13 \JY1/mc/m/n/12 回 \OT1/cmr/m/n/12 HL7 \J
 Y1/mc/m/n/12 セミナ ー \OT1/cmr/m/n/12 HL7 \JY1/mc/m/n/12 入門\OT1/cmr/m/n/12 ,
 http://www.hl7.jp/docs/seminar/SeminarNo13Kawamata.pdf 
  []
 
-[23
+[25
 
-] (./tokuron.lof)
+]
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+[]\OT1/cmr/m/n/12 [\JY1/mc/m/n/12 レポ ート\OT1/cmr/m/n/12 ]NoSQL \JY1/mc/m/n/1
+2 の必要性と主要プロダクト比較\OT1/cmr/m/n/12 ,
+ []
+
+[26] (./tokuron.lof)
 \tf@lof=\write4
 \openout4 = `tokuron.lof'.
 
- [24
+ [27
 
 ] (./tokuron.lot)
 \tf@lot=\write5
 \openout5 = `tokuron.lot'.
 
- [25
+ [28
 
 ] (./tokuron.aux) ) 
 Here is how much of TeX's memory you used:
- 2432 strings out of 493807
- 36945 string characters out of 6151952
- 97533 words of memory out of 5000000
- 5885 multiletter control sequences out of 15000+600000
+ 2433 strings out of 493807
+ 36954 string characters out of 6151952
+ 96533 words of memory out of 5000000
+ 5886 multiletter control sequences out of 15000+600000
  16278 words of font info for 63 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  28i,11n,23p,238b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tokuron.dvi (29 pages, 55084 bytes).
+Output written on tokuron.dvi (31 pages, 60844 bytes).

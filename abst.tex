@@ -1,31 +1,17 @@
-This paper presents the concept about a web application, i
-n which patients and medical workers can share healthcare information each otherbetween patients and doctors.
-Healthcare information has is not been shared between patients and medical workersdoctors
-in Japan, since
-because the standard for healthcare information systems
-had is not been arrangedestablished..
+This paper presents the concept about a web application, in which patients and medical workers can share healthcare information each other.
+Healthcare information has not been shared between patients and medical workers in Japan, since the standard for healthcare information systems had not been established.
 
-It is a waste of time and money for patients and doctors medical workers to inspect a patient to get almost same medical information in different pospitalscarry out inspections
-to get  the same information which patients did.
-If it isn't done, patients and doctors can save medical cost.
+It is a waste of time and money for patients and medical workers to inspect a patient to get almost same medical information in different hospitals.
 Accordingly, it need to develop a sharing web application can receive some different format document.
 
-Theis proposed systemstudy supportses that CSV format and HL7 format documents a
-s are input  documents. HL7 is a set of standard for transfer clinical information data between software applications developed by various vender.
-Because some hospitals mainly supplying
-primary care use Excel instead of healthcare information system.
-And other hospital supplying surgery use the system.
-it can output data in HL7 format.
-Thereby, it can let hospitals share healthcare information.
+The proposed system supports CSV format and HL7 format documents as input documents. HL7 is a set of standard for transfer clinical information data between software applications developed by various vender.
 
-The information is stored inmanaged on CouchDB,
-which is a type of document database management system using key and valueand assigned keys.
-Keys, the word of clinical information item, are named as different words by each management systems. made from different formats.
-Thus So, some words are have to be used as same semantic keys.
-In additionAnd, the same semantic keys must beare connected
-to use as the same semantic data.
-This function enables Therefore, the application tocan search information
-that the key have almost same meaning, even if the information made from different softwares.
+The information is stored in CouchDB, which is a type of document database management system using key and value.
+Keys, the word of clinical information item, are named as different words by each management systems.
+Thus some words have to be used as same semantic keys.
+In addition, the same semantic keys must be connected to use as the same semantic data.
+This function enables the application to search information that the key have almost same meaning, even if the information made from different softwares.
 
-
-最後の一文は医療DBをつくったというところまで戻って、グッとくる文でまとめてください。
+Finally, the database system was developed by this study.
+It can receive some different format data, and collect them.
+It may be able to be used in medical surveys.

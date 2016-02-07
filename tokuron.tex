@@ -25,7 +25,8 @@ system the patient has become the subject}
 
 \pagenumbering{arabic}
 
-\section{はじめに}
+%\section{緒言}
+\section{緒言}
 \input{chap1}
 \clearpage
 
@@ -41,27 +42,27 @@ system the patient has become the subject}
 \input{chap3}
 \clearpage
 
-\section{複数フォーマットに対応した情報共有データベースシステム}
+\section{複数の入力形式に対応した情報共有データベースシステム}
 \input{chap4}
 \clearpage
 
-
-
-\section{結果・考察}
+\section{結言}
 \input{chap5}
 \clearpage
 
 
 \appendix
 
-%\section*{謝辞}
-%本研究の遂行,論文作成にあたり,
-%多大なご指導を賜りました鈴鹿工業高等専門学校電子情報工学科
-%青山俊弘准教授に心から感謝致します.
-%また,研究を共にした青山研究室のみなさまにも感謝致します.
+\section*{謝辞}
+本研究の遂行,論文作成にあたり,
+多大なご指導を賜りました鈴鹿工業高等専門学校電子情報工学科
+青山俊弘准教授に心から感謝致します.
+また,研究を共にした青山研究室のみなさまにも感謝致します.
 
 \section*{付録}
 \begin{table}[htb]
+	\caption{NoSQL版で導入したライブラリ群}
+	\begin{center}
 	\begin{tabular}{|l|c|r|r|}\hline
 	導入ソフト & バージョン \\ \hline \hline
 	Node.js & 0.12.6 \\ \hline
@@ -78,6 +79,10 @@ system the patient has become the subject}
 
 
 	\end{tabular}
+	\end{center}
+
+	%\caption{NoSQL版で導入したライブラリ群}
+
 \end{table}
 
 
@@ -86,7 +91,7 @@ system the patient has become the subject}
 
 \begin{thebibliography}{12}
 	%背景
-	\bibitem{bibi2} 国立病院機構における診療情報分析システムについて・川島直美ら,情報処理学会デジタルプラクティス2013年15号
+	\bibitem{bibi2} 国立病院機構における診療情報分析システムについて・川島直美ら,情報処理学会デジタルプラクティス2013年15号(2013)
 
 
 	%HL7
@@ -104,11 +109,14 @@ system the patient has become the subject}
 
 
 	%あじさいネット
-	\bibitem{bibi3} 地域医療連携ネットワークの構築と運用継続性の追求・石黒満久
+	\bibitem{bibi3} 地域医療連携ネットワークの構築と運用継続性の追求・石黒満久,情報処理学会デジタルプラクティス2013年15号(2013)
+
+	%NoSQL
+	\bibitem{bibi121} [レポート]NoSQLの必要性と主要プロダクト比較, http://dev.classmethod.jp/event/dbtechsowcase-tokyo-2015-e-22/
 
 	%開発
-  \bibitem{bibi8} LLフレームワークBOOKS Django×Python・露木誠,技術評論社
-  \bibitem{bibi9} はじめてのNode.js-サーバサイドJavaScriptで Webアプリを開発する・松島浩道,ソフトバンク　クリエイティブ株式会社
+  \bibitem{bibi8} LLフレームワークBOOKS Django×Python・露木誠,技術評論社(2009)
+  \bibitem{bibi9} はじめてのNode.js-サーバサイドJavaScriptで Webアプリを開発する・松島浩道,ソフトバンク　クリエイティブ株式会社(2013)
 
 	%プライバシー
   \bibitem{bibi10} Perera, Gihan, et al. "Views on health information sharing and privacy from primary care practices using electronic medical records." International journal of medical informatics 80.2 (2011): 94-101.

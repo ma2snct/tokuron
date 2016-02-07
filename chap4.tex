@@ -6,15 +6,26 @@
 	これを実現するためにNoSQLデータベースのCouchDBを用いて
 	システムを開発する.
 
-
-
 \subsection{CouchDBのドキュメントの構造}
 	本研究ではひとつの医療行為に対してひとつのドキュメントで管理する.
   本研究で使用するドキュメントが保持する情報を表\ref{tab:doc}に示す.
-  CouchDBのドキュメントのJSONで記述された内容を図\ref{json-for-doc}に示す.
-  必須の項目である\_id,\_rev以外にdata要素だけを用意した.
+  これに従ってJSONで記述された医療情報の内容を図\ref{json-for-doc}に示す.
+  CouchDBのドキュメントとして必須の項目である\_id,\_rev以外にdata要素だけを用意した.
   今後,必要になったときに他の要素を追記することは可能である.
 
+	\begin{table}[htb]
+    \begin{center}
+      \caption{ドキュメントが保持する情報}
+      \begin{tabular}{|l|c|r|r|}\hline
+      Key & Value \\ \hline \hline
+      \_id &  患者名、ドキュメント作成日をドキュメントIDとしている. \\ \hline
+      \_rev & \shortstack{ドキュメントの更新回数を示す. \\ 更新時に参照し競合を防ぐ.} \\ \hline
+      %name & 患者の名前 \\ \hline
+      data & \shortstack{医療行為によって得られた情報を格納.} \\ \hline
+      \end{tabular}
+      \label{tab:doc}
+    \end{center}
+  \end{table}
 
   \begin{figure}[htbp]
     \begin{center}
@@ -25,27 +36,20 @@
   \end{figure}
 
 
-  \begin{table}[htb]
-    \begin{center}
-      \caption{ドキュメントが保持する情報}
-      \begin{tabular}{|l|c|r|r|}\hline
-      Key & Value \\ \hline \hline
-      \_id &  患者名、ドキュメント作成日をドキュメントIDとしている. \\ \hline
-      \_rev & \shortstack{ドキュメントの更新回数を示す. \\ 更新時に参照し競合を防ぐ.} \\ \hline
-      %name & 患者の名前 \\ \hline
-      data & \shortstack{医療行為によって得られた情報を \\ json形式で格納.} \\ \hline
-      \end{tabular}
-      \label{tab:doc}
-    \end{center}
-  \end{table}
 
 
-\subsection{機能}
+
+\subsection{実装}
+	開発にはJavascriptのフレームワークであるNode.jsを用いた.
+	また,データベースにはCouchDBを用いた.
+	その他,使用したライブラリ群は付録に記載する.\cite{bibi9}
+
 	\subsubsection{同義キーを活用したデータ閲覧}
 
 		ユーザはログイン後検索ワードを送信すると,
 		CouchDBのドキュメントのdataオブジェクトに検索ワードを
 		含でいたキーと値の組を列挙する.
+		データの読み取り方はドキュメント名:項目名→値となっている.
 
 		図\ref{getdb}は白血球という単語で検索した結果である.
 		検索結果のドキュメント名の日付が前後しているが,
@@ -57,16 +61,18 @@
 					%\includegraphics[width=15cm, bb=0 0 1366 1078, clip]{./gazou/getdb.png}
 					\includegraphics[width=15cm, bb=0 0 652 603, clip]{./gazou/getdb2.png}
 				\end{center}
-				\caption{白血球　でデータ抽出した様子}
+				\caption{白血球で検索した様子}
 				\label{getdb}
 			\end{figure}
 
 
-		図\ref{relation}では投薬データの処方日と診断データの日時が同義として登録されている.
-		図\ref{relationApp}では検索ワードは処方であるので
+		図\ref{relation}は投薬データの処方日と診断データの日時が同義として
+		登録されている様子を示している.
+		図\ref{relationApp}は検索ワードを処方としたときの結果を示しており,
 		処方をキーに含むデータが検索結果として表示される.
 		さらに,検索結果に処方日があり,これは日時と同義として登録されているため,
 		日時のデータも検索結果として表示される.
+
 
 		\begin{figure}[htbp]
 			\begin{center}
@@ -78,7 +84,7 @@
 
 		\begin{figure}[htbp]
 			\begin{center}
-				\includegraphics[width=15cm, bb=0 0 609 528, clip]{./gazou/relationApp3.png}
+				\includegraphics[width=15cm, bb=0 0 609 528, clip]{./gazou/relationApp4.png}
 			\end{center}
 			\caption{処方と検索して同義キーとして登録されている日時も表示する}
 			\label{relationApp}
@@ -95,7 +101,7 @@
 				\caption{ファイル入力ページ}
 				\label{fileiopage}
 			\end{figure}
-			ファイル入力はユーザがログイン後,図\ref{fileiopage}で行う.
+			ファイル入力はユーザがログイン後,図\ref{fileiopage}の画面で行う.
 			CSVファイルは入力ファイルの行,列のどちらかに医療情報,
 			他方に日付をとっているものを想定している.
 			このため,CSV入力ファイルに複数回の診療の記録があることを許容する設計にしており,
@@ -131,7 +137,7 @@
 				\begin{center}
 					\includegraphics[width=10cm, bb=0 0 581 571, clip]{./gazou/kensa-data.png}
 				\end{center}
-				\caption{医療大の検査データ}
+				\caption{CouchDBに投入された医療大の検査データ}
 				\label{iryoudai-kensa-data}
 			\end{figure}
 
@@ -140,7 +146,7 @@
 				\begin{center}
 					\includegraphics[width=10cm, bb=0 0 576 573]{./gazou/touyaku-data2.png}
 				\end{center}
-				\caption{医療大の投薬データ}
+				\caption{CouchDBに投入された医療大の投薬データ}
 				\label{iryoudai-touyaku-data}
 			\end{figure}
 
@@ -156,7 +162,7 @@
 				\begin{center}
 					\includegraphics[width=10cm, bb=0 0 640 475]{./gazou/blood-data-couch.png}
 				\end{center}
-				\caption{家庭用血圧計の出力データ}
+				\caption{CouchDBに入力された家庭用血圧計の出力データ}
 				\label{blood-data-couch}
 			\end{figure}
 
@@ -188,7 +194,7 @@
 				\begin{center}
 					\includegraphics[width=10cm, bb=0 0 576 573]{./gazou/hl7-data.png}
 				\end{center}
-				\caption{HL7のサンプルデータ}
+				\caption{CouchDBに投入されたHL7のサンプルデータ}
 				\label{hl7-data}
 			\end{figure}
 
@@ -203,7 +209,7 @@
 	以下の３つのものが必要となる.
 
 	\begin{itemize}
-		\item そのフォーマットに対するパース処理
+		\item その形式に対するパース処理
 		\item データ定義に関する情報
 		\item  同義キーの追加登録
 	\end{itemize}
